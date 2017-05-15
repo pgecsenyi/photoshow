@@ -1,0 +1,52 @@
+<div id="navigation-bar" ng-class="{error: error, warning: !error && areThereAnyWarnings()}">
+  <div id="navigation-bar-left">
+    <div>
+      <div id="btn-back" class="button"
+           ng-click="back()"
+           ng-show="visibleButtons.back"
+           title="Back"></div>
+      <div id="btn-home" class="button"
+           ng-click="home()"
+           ng-show="visibleButtons.home"
+           title="Home"></div>
+      <div id="btn-generate" class="button"
+           ng-click="onGeneratePresentationForSelected()"
+           ng-show="visibleButtons.generate"
+           title="Generate presentation from the selected collections"></div>
+      <div id="btn-create-presentation" class="button"
+           ng-click="onCreatePresentation()"
+           ng-show="visibleButtons.createPresentation"
+           title="Create presentation"></div>
+      <div id="btn-add-audience" class="button"
+           ng-click="changeView('/add-audience')"
+           ng-show="visibleButtons.addAudience"
+           title="Add audience"></div>
+      <div id="btn-save" class="button"
+           ng-click="onSave()"
+           ng-show="visibleButtons.save"
+           title="Save"></div>
+      <div id="btn-cancel" class="button"
+           ng-click="onCancel()"
+           ng-show="visibleButtons.cancel"
+           title="Cancel"></div>
+      <div id="btn-forward" class="button"
+           ng-click="onForward()"
+           ng-show="visibleButtons.forward"
+           title="Forward"></div>
+      <div id="btn-display-errors" class="button"
+           ng-click="toggleMessage()"
+           ng-show="error || areThereAnyWarnings()"
+           title="Toggle messages"></div>
+    </div>
+  </div>
+  <div id="navigation-bar-center">
+    {{title}}
+  </div>
+  <div id="navigation-bar-right" ng-controller="WindowController">
+    <div>
+      <div id="btn-minimize" ng-click="onMinimize()" title="Minimize"></div>
+      <div id="btn-maximize" ng-click="onMaximize()" title="Maximize"></div>
+      <div id="btn-close" ng-click="onClose()" title="Close"></div>
+    </div>
+  </div>
+</div>

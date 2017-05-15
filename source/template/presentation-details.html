@@ -1,0 +1,47 @@
+<div ng-include="'template/navigation-bar.html'"></div>
+<div id="content">
+  <div id="presentation-details-page">
+    <div id="message" ng-show="displayMessage">
+      <p class="error" ng-show="error">{{error}}</p>
+    </div>
+    <h1>{{presentation.title}}</h1>
+    <div id="image">
+      <img src="{{previewPath}}" />
+    </div>
+    <div id="info">
+      <div class="row">
+        <div class="label">Path</div>
+        <div class="value">{{presentation.path}}</div>
+      </div>
+      <div class="row">
+        <div class="label">Audience</div>
+        <div class="value">{{presentation.audienceId}}</div>
+      </div>
+      <div class="row">
+        <div class="label">Number of images</div>
+        <div class="value">{{presentation.images.length}}</div>
+      </div>
+      <div class="row" ng-if="!areThereAnyTransformations()">
+        <div class="label">Transformations</div>
+        <div class="value">None</div>
+      </div>
+      <div class="row" ng-if="areThereAnyTransformations()">
+        <div class="label">Transformations</div>
+        <div class="value">
+          <ul>
+            <li ng-repeat="transformation in transformationSummary">{{transformation}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="control">
+      <div class="medium-button" ng-click="onDelete()">Delete</div>
+      <div class="medium-button" ng-click="onEdit()">Edit</div>
+      <div class="medium-button" ng-click="onGenerateWebpage()">Create web page</div>
+      <div class="medium-button" ng-click="onGeneratePresentation()">
+        Generate presentation
+      </div>
+      <div class="medium-button" ng-click="onPlay()">Play</div>
+    </div>
+  </div>
+</div>

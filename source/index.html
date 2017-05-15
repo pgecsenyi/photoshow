@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="coreApp">
+  <head>
+    <meta charset="UTF-8">
+    <title>PhotoShow</title>
+    <link rel="stylesheet" type="text/css" href="resource/stylesheet/style.css" />
+    <script language="javascript" type="text/javascript" src="script/external/angular.min.js"></script>
+    <script language="javascript" type="text/javascript" src="script/external/angular-route.min.js"></script>
+    <script language="javascript" type="text/javascript" src="script/external/angular-loadscript.js"></script>
+    <script language="javascript" type="text/javascript" src="script/external/hotkeys.min.js"></script>
+  </head>
+  <body>
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    <div ng-view></div>
+    <script language="javascript" type="text/javascript">
+       require('./script/core-app.js');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+<div class="dialog">
+  <h1>Description</h1>
+  <form name="editDescriptionForm">
+    <input name="description" type="text" class="big-input" style="width: 90%;" maxlength="1000"
+           ng-model="description"
+           ng-maxlength="1000" />
+    <br />
+    <input type="button" class="medium-button" ng-click="onClearDescription()" value="Clear" />
+    <input type="button" class="medium-button" ng-click="onApplyDescription()" value="Apply" />
+  </form>
+</div>

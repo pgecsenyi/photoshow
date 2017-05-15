@@ -1,0 +1,31 @@
+.popup-menu {
+  background: rgba(20, 20, 20, 0.7);
+  border-radius: 0.3em;
+  color: #FFF;
+  display: none;
+  padding: 0;
+  position: absolute;
+  z-index: 997;
+}
+.popup-menu ul {
+  list-style-type: none;
+  margin: 0.5em 0;
+  padding: 0;
+}
+.popup-menu ul > li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.popup-menu ul > li a {
+  background-color: inherit;
+  color: #FFF;
+  font-size: 1.1em;
+  margin: 0.2em 0;
+  padding: 0.1em 0.8em;
+  text-decoration: none;
+}
+.popup-menu ul > li a:hover {
+  background-color: #EA8D23;
+  color: #FFF;
+}

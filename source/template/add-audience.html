@@ -1,0 +1,42 @@
+<div ng-include="'template/navigation-bar.html'"></div>
+<div id="content">
+  <div id="message" ng-show="displayMessage">
+    <p class="error" ng-show="error">{{error}}</p>
+    <p class="warning" ng-show="addAudienceForm['audience-color'].$dirty && addAudienceForm['audience-color'].$invalid">
+      The color is optional, although when provided it has to be a valid hexadecimal value, for example <code>#333</code> for 80% gray or <code>#FF0000</code> for red.
+    </p>
+    <p class="warning" ng-show="addAudienceForm['audience-name'].$dirty && addAudienceForm['audience-name'].$invalid">
+      The name must be at least 3, at most 50 characters long.
+    </p>
+    <p class="warning" ng-show="addAudienceForm['audience-id'].$dirty && addAudienceForm['audience-id'].$invalid">
+      The identifier must be at least 3, at most 100 characters long.
+    </p>
+  </div>
+  <div id="input-page">
+    <p>Here you can add a new audience (who you would like to create a presentation to). Please specify a color (as a
+      hexadecimal value) which will be used to highlight the related presentations so you can easily identify them.</p>
+    <form name="addAudienceForm" ng-submit="submitForm(addAudienceForm.$valid)">
+      <div class="form-data">
+        <label for="audience-name">Name</label>
+        <input name="audience-name" type="text" class="big-input" maxlength="50"
+               ng-model="audienceName" ng-change="onAudienceNameChange()"
+               ng-maxlength="50" ng-minlength="3" required />
+        <br />
+        <label for="audience-id">Identifier</label>
+        <input name="audience-id" type="text" class="big-input" maxlength="100"
+               ng-model="audienceId" ng-change="isAudienceIdEdited=true"
+               ng-maxlength="100" ng-minlength="3" required />
+        <br />
+        <label for="audience-color">Color</label>
+        <input name="audience-color" type="text" class="big-input" maxlength="7"
+               ng-model="audienceColor" ng-pattern="/^#[0-9A-Za-z]{3}(|[0-9A-Za-z]{3})$/"
+               ng-maxlength="7" />
+        <br />
+      </div>
+      <div class="form-control">
+        <input type="submit" class="medium-button" value="Add"
+               ng-disabled="addAudienceForm.$invalid" />
+      </div>
+    </form>
+  </div>
+</div>

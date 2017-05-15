@@ -1,0 +1,16 @@
+<div ng-include="'template/navigation-bar.html'"></div>
+<div id="content">
+  <div id="start-page">
+    <div id="logo">
+      <img src="resource/image/logo.png" alt="PhotoShow" />
+    </div>
+    <div class="big-button" ng-click="changeView('/create-collection')">
+      <div id="create-collection" class="big-button-icon"></div>
+      <div class="big-button-label">Create collection</div>
+    </div>
+    <div class="big-button" ng-click="changeView('/open-collection')">
+      <div id="open-collection" class="big-button-icon"></div>
+      <div class="big-button-label">Open collection</div>
+    </div>
+  </div>
+</div>

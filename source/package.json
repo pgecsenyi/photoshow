@@ -1,0 +1,30 @@
+{
+  "name": "photoshow",
+  "version": "0.1.0",
+  "description": "An image presentation builder.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "",
+  "keywords": [
+    "PhotoShow",
+    "image",
+    "picture",
+    "photo",
+    "presentation",
+    "slideshow"
+  ],
+  "author": "pgecsenyi",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.4.1"
+  },
+  "dependencies": {
+    "electron-process": "^0.2.0",
+    "jimp": "^0.2.27",
+    "node-dir": "^0.1.16",
+    "xml2js": "^0.4.17",
+    "xmlbuilder": "^8.2.2"
+  }
+}

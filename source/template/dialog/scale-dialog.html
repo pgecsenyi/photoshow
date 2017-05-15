@@ -1,0 +1,16 @@
+<div class="dialog">
+  <h1>Scale</h1>
+  <p>It is enough to provide only one value (either for the larger or the smaller side).</p>
+  <form name="editScaleForm">
+    <input name="scale-width" type="text" class="big-input"
+           ng-model="transformations.scale.width" ng-pattern="/^[0-9]+$/"
+           ng-maxlength="5" />
+    x
+    <input name="scale-height" type="text" class="big-input"
+           ng-model="transformations.scale.height" ng-pattern="/^[0-9]+$/"
+           ng-maxlength="5" />
+    <br />
+    <input type="button" class="medium-button" ng-click="onClearTransformation('scale')" value="Clear" />
+    <input type="button" class="medium-button" ng-click="onApplyTransformation('scale')" value="Apply" />
+  </form>
+</div>

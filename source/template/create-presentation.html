@@ -1,0 +1,45 @@
+<div ng-include="'template/navigation-bar.html'"></div>
+<div id="content">
+  <div id="message" ng-show="displayMessage">
+    <p class="error" ng-show="error">{{error}}</p>
+    <p class="warning" ng-show="createPresentationForm['presentation-id'].$dirty && createPresentationForm['presentation-id'].$invalid">
+      The identifier must be at least 5, at most 250 characters long.
+    </p>
+    <p class="warning" ng-show="createPresentationForm['presentation-title'].$dirty && createPresentationForm['presentation-title'].$invalid">
+      The title must be at least 5, at most 150 characters long.
+    </p>
+  </div>
+  <div id="input-page">
+    <p>Please provide the basic information necessary to create the new presentation.</p>
+    <form name="createPresentationForm" ng-submit="submitForm(createPresentationForm.$valid)">
+      <div class="form-data">
+        <label for="presentation-title">Title</label>
+        <input name="presentation-title" type="text" class="big-input" maxlength="150"
+               ng-model="presentationTitle" ng-change="onPresentationTitleChange()"
+               ng-maxlength="150" ng-minlength="5" required />
+        <br />
+        <label for="presentation-id">Identifier</label>
+        <input name="presentation-id" type="text" class="big-input" maxlength="250"
+               ng-model="presentationId" ng-change="isPresentationIdEdited=true"
+               ng-maxlength="250" ng-minlength="5" required />
+        <br />
+        <label for="presentation-path">Path to photos</label>
+        <input name="presentation-path" type="text" class="big-input" ng-model="presentationPath"
+              required />
+        <br />
+        <label for="presentation-base-path">Base path</label>
+        <input name="presentation-base-path" type="text" class="big-input" ng-model="presentationBasePath"
+               required disabled />
+        <br />
+        <label for="presentation-audience">Audience</label>
+        <input name="presentation-audience" type="text" class="big-input" ng-model="presentationAudienceId"
+               required />
+        <br />
+      </div>
+      <div class="form-control">
+        <input type="button" class="medium-button" ng-click="onBrowse()" value="Browse" />
+        <input type="submit" class="medium-button" ng-disabled="createPresentationForm.$invalid" value="Next" />
+      </div>
+    </form>
+  </div>
+</div>

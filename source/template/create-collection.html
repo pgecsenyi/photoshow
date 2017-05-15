@@ -1,0 +1,27 @@
+<div ng-include="'template/navigation-bar.html'"></div>
+<div id="content">
+  <div id="message" ng-show="displayMessage">
+    <p class="error" ng-show="error">{{error}}</p>
+  </div>
+  <div id="input-page">
+    <p>Here you can specify where to create the new collection. The collection will be stored as a simple XML document.
+      For every presentation in the collection, a relative path will be stored, which is not supposed to change. The
+      base path on the other hand is only stored for the current session, it will not be persisted and you will be asked
+      to provide it again every time you open the collection.</p>
+    <form>
+      <div class="form-data">
+        <label for="collection-path">Collection path</label>
+        <input name="collection-path" type="text" class="big-input"
+               ng-model="collectionPath" ng-change="clearError()" />
+        <br />
+        <label for="base-path">Current base path</label>
+        <input name="base-path" type="text" class="big-input" ng-model="basePath" />
+        <br />
+      </div>
+      <div class="form-control">
+        <input type="button" class="medium-button" ng-click="onBrowse()" value="Browse" />
+        <input type="button" class="medium-button" ng-click="onCreate()" value="Create" />
+      </div>
+    </form>
+  </div>
+</div>

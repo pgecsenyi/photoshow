@@ -1,0 +1,59 @@
+@keyframes button-bg-change {
+	from { background-color: #DDD; }
+}
+
+.big-button {
+  background-color: #DDD;
+  border-bottom: 0.25em solid #BBB;
+  border-radius: 0.2em;
+  color: #000;
+  font-size: 1.2em;
+  margin: 0.5em 0.2em;
+  padding: 0.5em;
+}
+.big-button:hover {
+  animation: button-bg-change 400ms;
+  background: #3961B2;
+  border-bottom: 0.15em solid #0028A4;
+  border-radius: 0.2em;
+  color: #FFF;
+  cursor: pointer;
+  margin-top: 0.6em;
+}
+.big-button .big-button-icon {
+  float: left;
+  height: 32px;
+  width: 32px;
+}
+.big-button .big-button-label {
+  margin-left: 2.5em;
+  padding: 0.2em;
+}
+
+.medium-button {
+  background: #DDD;
+  border: 0;
+  border-bottom: 0.25em solid #BBB;
+  border-radius: 0.2em;
+  color: #000;
+  display: inline-block;
+  font-size: 1em;
+  margin: 0.5em 0.3em;
+  padding: 0.6em 1em;
+}
+.medium-button:hover {
+  animation: button-bg-change 400ms;
+  background: #3961B2;
+  border-bottom: 0.15em solid #0028A4;
+  border-radius: 0.2em;
+  color: #FFF;
+  cursor: pointer;
+  margin-top: 0.55em;
+}
+input.medium-button:disabled, input.medium-button:disabled:hover {
+  animation: none;
+  background: #999;
+  border: none;
+  color: #444;
+  margin-top: 0.55em;
+}

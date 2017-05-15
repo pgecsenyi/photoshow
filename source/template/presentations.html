@@ -1,0 +1,18 @@
+<div ng-include="'template/navigation-bar.html'"></div>
+<div id="content">
+  <div id="message" ng-show="displayMessage">
+    <p class="error" ng-show="error">{{error}}</p>
+  </div>
+  <div id="presentations-page">
+    <input type="text" ng-model="nameFilter" placeholder="Filtering condition" />
+    <ul>
+      <li ng-repeat="presentation in presentations | presentationTitleFilter:nameFilter"
+          ng-click="changeView('/presentation-details' + presentation.id)">
+        <div class="presentation-title">{{presentation.title}}</div>
+        <div class="presentation-audience" style="background-color: {{audienceColors[presentation.audienceId]}}">
+          {{presentation.audienceId}}
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

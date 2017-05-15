@@ -1,0 +1,24 @@
+<div ng-include="'template/navigation-bar.html'"></div>
+<div id="content">
+  <div id="message" ng-show="displayMessage">
+    <p class="error" ng-show="error">{{error}}</p>
+  </div>
+  <div id="input-page">
+    <p>Here you can specify which collection you would like to open.</p>
+    <form>
+      <div class="form-data">
+        <label for="collection-path">Collection path</label>
+        <input name="collection-path" type="text" class="big-input"
+               ng-model="collectionPath" ng-change="clearError()" />
+        <br />
+        <label for="base-path">Base path</label>
+        <input name="base-path" type="text" class="big-input" ng-model="basePath" />
+        <br />
+      </div>
+      <div class="form-control">
+        <input type="button" class="medium-button" ng-click="onBrowse()" value="Browse" />
+        <input type="button" class="medium-button" ng-click="onOpen()" value="Open" />
+      </div>
+    </form>
+  </div>
+</div>

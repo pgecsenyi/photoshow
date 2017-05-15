@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      const background = require('electron-process').background;
+      background.registerModule(require('./script/util/presentation-generator-mediator.js'));
+    </script>
+  </head>
+  <body>
+    <h1>Background window</h1>
+  </body>
+</html>

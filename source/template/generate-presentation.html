@@ -1,0 +1,29 @@
+<div ng-include="'template/navigation-bar.html'"></div>
+<div id="content">
+  <div id="message" ng-show="displayMessage">
+    <p class="error" ng-show="error">{{error}}</p>
+  </div>
+  <div id="generate-presentation-page">
+    <div id="main">
+      <div id="title">
+        <p>Generating presentation&hellip;</p>
+        <h1>{{presentation.title}}</h1>
+      </div>
+      <div id="progress-info">
+        <div>
+          <div class="progress-bar">
+            <div id="meter">
+              <span style="width: {{progressPercentage}}%"></span>
+            </div>
+            <div id="label">
+              <div>{{progressPercentage}}%</div>
+            </div>
+          </div>
+          <div id="info">
+            <p>Processing image <code>{{currentFile}}</code>&hellip;</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

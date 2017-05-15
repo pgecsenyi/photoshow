@@ -1,0 +1,110 @@
+@import url("button.css");
+@import url("navigation-bar.css");
+@import url("page.css");
+
+@keyframes message-fade {
+  0% { opacity: 0.0; visibility: visible; }
+  10% { opacity: 1.0; }
+  /*90% { opacity: 1.0; }
+  100% { opacity: 0.0; visibility: collapse; }*/
+}
+
+body {
+  font-family: Lucida, Verdana, sans-serif;
+  margin: 0;
+  overflow: hidden;
+}
+
+textarea, input {
+  outline: none;
+}
+
+#content {
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  position: absolute;
+  left: 0; top: 40px; right: 0; bottom: 0;
+}
+
+#message {
+  z-index: 999;
+
+  position: absolute;
+  left: 0; top: 0; right: 0;
+}
+#message > p {
+  animation: message-fade 6s forwards;
+  font-size: 0.9em;
+  margin: 0;
+  padding: 0.6em;
+}
+#message > .error {
+  background-color: #B72F2F;
+  color: #FFF;
+}
+#message > .warning {
+  background-color: #F2EA52;
+  color: #000;
+}
+
+.big-input {
+  background-color: inherit;
+  color: #000;
+  border: 0.2em solid #BBB;
+  border-radius: 0.2em;
+  font-size: 1.2em;
+  margin: 0.1em auto;
+  padding: 0.4em;
+  width: 60%;
+}
+.big-input:disabled {
+  background-color: #CCC;
+  color: #000;
+}
+label {
+  display: inline-block;
+  margin-right: 0.5em;
+  text-align: right;
+  vertical-align: middle;
+  width: 30%;
+}
+
+.form-control {
+  text-align: right;
+}
+.form-data {
+  margin: 1.5em auto;
+}
+
+.dialog {
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid #555;
+  box-shadow: 0.1em 0.1em 0.5em #555;
+  color: #FFF;
+  display: block;
+  margin: auto;
+  padding: 0.5em;
+}
+.dialog-content {
+  display: table-cell;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
+.dialog-overlay {
+  display: table;
+  height: 100%;
+  z-index: 998;
+  width: 100%;
+
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+}
+.dialog .big-input {
+  background-color: inherit;
+  color: #FFF;
+  width: 3em;
+}

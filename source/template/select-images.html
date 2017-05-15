@@ -1,0 +1,76 @@
+<link rel="stylesheet" type="text/css" href="resource/stylesheet/popup.css" />
+<div ng-include="'template/navigation-bar.html'"></div>
+<div id="popup-menu-more" class="popup-menu">
+  <ul>
+    <li><a ng-click="onRotate()">Rotate</a></li>
+    <li><a ng-click="onScale()">Scale</a></li>
+    <li><a ng-click="onClean()">Clean</a></li>
+  </ul>
+</div>
+<div id="content">
+  <div id="message" ng-show="displayMessage">
+    <p class="error" ng-show="error">{{error}}</p>
+  </div>
+  <div id="select-images-page">
+    <div id="image-container">
+      <div id="internal-image-container">
+        <img src="{{currentImagePath}}" class="center fit" style="transform: rotate({{getRotateDegree()}}deg);" />
+      </div>
+    </div>
+    <div id="control-panel">
+      <div id="controls">
+        <div>
+          <div id="previous" ng-click="onPreviousImage()" title="Previous"></div>
+          <div id="more" title="More" popup="popup-menu-more"></div>
+          <div id="rotate" title="Quick rotate by 90&deg;" ng-click="onQuickRotate()"></div>
+          <div id="add-description" title="Add description" ng-click="onAddDescription()"></div>
+          <div id="accept" ng-click="onAccept()" ng-hide="isCurrentImageSelected" title="Add image to presentation"></div>
+          <div id="reject"
+               ng-click="onReject()" ng-show="isCurrentImageSelected"
+               title="Exclude image from presentation"></div>
+          <div id="next" ng-click="onNextImage()" title="Next"></div>
+        </div>
+      </div>
+      <div id="status-bar" ng-class="{highlight: isCurrentImageSelected}">
+        <div id="status-bar-left">SELECTED: {{selectedImageCount}}</div>
+        <div id="status-bar-right">{{currentImageNumber}} / {{allImageCount}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="dialog-overlay" ng-show="shownDialog">
+    <div class="dialog-content">
+      <description-dialog ng-show="shownDialog === 'description'"></description-dialog>
+      <rotate-dialog ng-show="shownDialog === 'rotate'"></rotate-dialog>
+      <scale-dialog ng-show="shownDialog === 'scale'"></scale-dialog>
+    </div>
+  </div>
+  <script language="javascript" type="text/javascript-lazy">
+    // Handle popups.
+    var popupManager = require('./script/util/popup.js');
+
+    var btnMore = document.getElementById('more');
+    if (typeof btnMore !== 'undefined') {
+      btnMore.addEventListener('click', popupManager.showPopup);
+    }
+
+    // Resize image.
+    function setContainerHeight()
+    {
+      var page = document.getElementById('select-images-page');
+      if (typeof page === 'undefined') {
+        return;
+      }
+      var pageHeight = page.offsetHeight;
+      var imageContainer = document.getElementById('internal-image-container');
+      if (typeof imageContainer === 'undefined') {
+        return;
+      }
+      imageContainer.style.height = pageHeight + 'px';
+    }
+
+    setContainerHeight();
+    window.onresize = function(event) {
+      setContainerHeight();
+    };
+  </script>
+</div>

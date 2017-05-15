@@ -1,0 +1,44 @@
+<div ng-include="'template/navigation-bar.html'"></div>
+<div id="content">
+  <div id="message" ng-show="displayMessage">
+    <p class="error" ng-show="error">{{error}}</p>
+  </div>
+  <div id="edit-transformations-page">
+    <div class="table-centered">
+      <div class="column left">
+        <div id="btn-rotate" class="button"
+             ng-class="{active: enabledTransformations.rotate}"
+             ng-click="onEditRotate()">
+          <p>Rotate</p>
+          <span ng-show="enabledTransformations.rotate">by {{transformations.rotate.degree}}&deg;</span>
+        </div>
+      </div>
+      <div class="column center">
+        <div id="btn-scale" class="button"
+             ng-class="{active: enabledTransformations.scale}"
+             ng-click="onEditScale()">
+          <p>Scale</p>
+          <span ng-show="enabledTransformations.scale">
+            to {{transformations.scale.width}}x{{transformations.scale.height}}
+          </span>
+        </div>
+      </div>
+      <div class="column right">
+        <div id="btn-clean" class="button"
+             ng-class="{active: enabledTransformations.clean}"
+             ng-click="onEditClean()">
+          <p>Clean meta</p>
+        </div>
+      </div>
+    </div>
+    <div id="control">
+      <div class="medium-button" ng-click="onNext()">Next</div>
+    </div>
+    <div class="dialog-overlay" ng-show="shownDialog">
+      <div class="dialog-content">
+        <rotate-dialog ng-show="shownDialog === 'rotate'"></rotate-dialog>
+        <scale-dialog ng-show="shownDialog === 'scale'"></scale-dialog>
+      </div>
+    </div>
+  </div>
+</div>

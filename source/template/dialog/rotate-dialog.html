@@ -1,0 +1,12 @@
+<div class="dialog">
+  <h1>Rotate by {{transformations.rotate.degree}}&deg;</h1>
+  <form name="editRotationForm">
+    <input name="rotate-degree" type="range" min="90" max="270" step="90"
+           style="width: 20em;"
+           ng-model="transformations.rotate.degree" ng-pattern="/^[0-9]{0,3}$/"
+           ng-maxlength="3" required />
+    <br />
+    <input type="button" class="medium-button" ng-click="onClearTransformation('rotate')" value="Clear" />
+    <input type="button" class="medium-button" ng-click="onApplyTransformation('rotate')" value="Apply" />
+  </form>
+</div>
