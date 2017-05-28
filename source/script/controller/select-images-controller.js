@@ -3,13 +3,14 @@ const entities = require('../dal/entities.js');
 module.exports = function ($scope, hotkeys, dalService, presentationEditorService) {
 
   $scope.title = 'Select images - PhotoShow';
-  $scope.visibleButtons = {'back' : true, 'save': true, 'cancel': true};
+  $scope.visibleButtons = {'back' : true, 'forward': true, 'save': true, 'cancel': true};
 
   $scope.allImageCount = 0;
   $scope.currentImageNumber = 1;
   $scope.description = null;
   $scope.enabledTransformations = {};
   $scope.isCurrentImageSelected = false;
+  $scope.movingImage = null;
   $scope.selectedImageCount = 0;
   $scope.shownDialog = null;
   $scope.transformations = {};
@@ -50,6 +51,16 @@ module.exports = function ($scope, hotkeys, dalService, presentationEditorServic
     this.changeView('/presentations');
   };
 
+  $scope.onClean = function () {
+    if (this.enabledTransformations.clean) {
+      this.enabledTransformations.clean = false;
+    } else {
+      this.enabledTransformations.clean = true;
+      this.transformations.clean = {};
+    }
+    applyTransformations();
+  };
+
   $scope.onClearDescription = function () {
     presentationEditorService.setDescriptionForCurrentImage(null);
     this.shownDialog = null;
@@ -62,16 +73,29 @@ module.exports = function ($scope, hotkeys, dalService, presentationEditorServic
     applyTransformations();
   };
 
+  $scope.onCut = function () {
+    this.movingImage = presentationEditorService.getCurrentPath();
+    presentationEditorService.cutCurrent();
+    this.currentImagePath = presentationEditorService.getCurrentPath();
+    refreshDisplayedInfo();
+  };
+
+  $scope.onForward = function () {
+    this.changeView('/presentations');
+  };
+
   $scope.onNextImage = function () {
+    displayNext();
+  };
+
+  $scope.onPaste = function () {
+    this.movingImage = null;
+    presentationEditorService.paste();
     displayNext();
   };
 
   $scope.onPreviousImage = function () {
     displayPrevious();
-  };
-
-  $scope.onReject = function () {
-    deselectImage();
   };
 
   $scope.onQuickRotate = function () {
@@ -88,14 +112,8 @@ module.exports = function ($scope, hotkeys, dalService, presentationEditorServic
     applyTransformations();
   };
 
-  $scope.onClean = function () {
-    if (this.enabledTransformations.clean) {
-      this.enabledTransformations.clean = false;
-    } else {
-      this.enabledTransformations.clean = true;
-      this.transformations.clean = {};
-    }
-    applyTransformations();
+  $scope.onReject = function () {
+    deselectImage();
   };
 
   $scope.onRotate = function () {
@@ -107,19 +125,7 @@ module.exports = function ($scope, hotkeys, dalService, presentationEditorServic
   };
 
   $scope.onSave = function () {
-    dalService.getDal().addOrUpdatePresentation(presentationEditorService.getPresentation())
-      .then(() => {
-        return dalService.getDal().save();
-      })
-      .then(() => {
-        presentationEditorService.reset();
-        this.changeView('/presentations');
-        this.$apply();
-      })
-      .catch(err => {
-        this.setError('Failed to save presentation. ' + err);
-        this.$apply();
-      });
+    save();
   };
 
   function applyTransformations() {
@@ -169,6 +175,11 @@ module.exports = function ($scope, hotkeys, dalService, presentationEditorServic
     });
   }
 
+  function deselectImage() {
+    presentationEditorService.removeCurrent();
+    refreshDisplayedInfo();
+  }
+
   function displayNext() {
     var nextPath = presentationEditorService.getNextPath();
     if (nextPath != null) {
@@ -200,11 +211,6 @@ module.exports = function ($scope, hotkeys, dalService, presentationEditorServic
     defineKeyboardShortcuts();
   }
 
-  function deselectImage() {
-    presentationEditorService.removeCurrent();
-    refreshDisplayedInfo();
-  }
-
   function refreshDisplayedInfo() {
     clearTransformations();
     $scope.currentImageNumber = presentationEditorService.getCurrentIndex() + 1;
@@ -213,6 +219,22 @@ module.exports = function ($scope, hotkeys, dalService, presentationEditorServic
     $scope.selectedImageCount = presentationEditorService.getSelectedImageCount();
     $scope.transformations = presentationEditorService.getTransformationsForCurrentImage() || {};
     setEnabledTransformations();
+  }
+
+  function save() {
+
+    return dalService.getDal().addOrUpdatePresentation(presentationEditorService.getPresentation())
+      .then(() => {
+        return dalService.getDal().save();
+      })
+      .then(() => {
+        presentationEditorService.reset();
+        $scope.$apply();
+      })
+      .catch(err => {
+        $scope.setError('Failed to save presentation. ' + err);
+        $scope.$apply();
+      });
   }
 
   function selectImage() {

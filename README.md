@@ -16,4 +16,4 @@ After package restore process completes, the application can be started by execu
   * Node.js 6.9.1
   * npm 3.10.8
   * eslint 3.10.2
-  * Visual Studio Code 1.7.2
+  * Visual Studio Code 1.12.2

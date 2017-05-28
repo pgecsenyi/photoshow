@@ -410,6 +410,16 @@
   vertical-align: middle;
   width: 50%;
 }
+#select-images-page > #moving-image {
+  border: 0.2em solid #FFF;
+  box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.2);
+  height: auto;
+  max-width: 200px;
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+  z-index: 1;
+}
 
 #select-images-page > #control-panel > #controls > div > #accept {
   background-image: url("../image/select-images/accept.png");
@@ -417,11 +427,17 @@
 #select-images-page > #control-panel > #controls > div > #add-description {
   background-image: url("../image/select-images/add-description.png");
 }
+#select-images-page > #control-panel > #controls > div > #cut {
+  background-image: url("../image/select-images/cut.png");
+}
 #select-images-page > #control-panel > #controls > div > #more {
   background-image: url("../image/select-images/more.png");
 }
 #select-images-page > #control-panel > #controls > div > #next {
   background-image: url("../image/select-images/next.png");
+}
+#select-images-page > #control-panel > #controls > div > #paste {
+  background-image: url("../image/select-images/paste.png");
 }
 #select-images-page > #control-panel > #controls > div > #previous {
   background-image: url("../image/select-images/previous.png");

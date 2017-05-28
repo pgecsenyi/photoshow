@@ -8,6 +8,7 @@ module.exports = function () {
   var allFiles = [];
   var basePath = '';
   var currentIndex = 0;
+  var cutImageName = null;
   var fullPath = '';
   var imageSelectionMap = Object.create(null);
   var presentation = null;
@@ -36,6 +37,12 @@ module.exports = function () {
           reject(err);
         });
     });
+  };
+
+  this.cutCurrent = function () {
+    this.addCurrent();
+    cutImageName = getCurrentFilename();
+    allFiles.splice(currentIndex, 1);
   };
 
   this.getAllFileCount = function () {
@@ -109,6 +116,11 @@ module.exports = function () {
       return typeof imageSelectionMap[name] !== 'undefined';
     }
     return false;
+  };
+
+  this.paste = function () {
+    allFiles.splice(currentIndex + 1, 0, cutImageName);
+    cutImageName = null;
   };
 
   this.removeCurrent = function () {
