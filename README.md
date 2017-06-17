@@ -13,7 +13,4 @@ After package restore process completes, the application can be started by execu
 ## Development Environment
 
   * Windows 10
-  * Node.js 6.9.1
-  * npm 3.10.8
-  * eslint 3.10.2
-  * Visual Studio Code 1.12.2
+  * Visual Studio Code 1.13.1

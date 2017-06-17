@@ -2,11 +2,9 @@
   "name": "photoshow",
   "version": "0.1.0",
   "description": "An image presentation builder.",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  },
-  "repository": "",
+  "author": "pgecsenyi",
+  "license": "MIT",
+  "repository": "https://github.com/pgecsenyi/photoshow.git",
   "keywords": [
     "PhotoShow",
     "image",
@@ -15,16 +13,29 @@
     "presentation",
     "slideshow"
   ],
-  "author": "pgecsenyi",
-  "license": "MIT",
-  "devDependencies": {
-    "electron": "^1.4.1"
+  "main": "main.js",
+  "scripts": {
+    "lint": "eslint -c ../.eslintrc.json script/*/*.js --ignore-pattern script/external/ > ../report_eslint.log",
+    "start": "electron ."
+  },
+  "engines": {
+    "node": "^6.9.1",
+    "npm": "^3.10.8"
   },
   "dependencies": {
+    "angular": "^1.5.8",
+    "angular-hotkeys": "^1.7.0",
+    "angular-route": "^1.5.8",
     "electron-process": "^0.2.0",
     "jimp": "^0.2.27",
     "node-dir": "^0.1.16",
     "xml2js": "^0.4.17",
     "xmlbuilder": "^8.2.2"
+  },
+  "devDependencies": {
+    "electron": "^1.4.1"
+  },
+  "peerDependencies": {
+    "eslint": "^3.10.2"
   }
 }
