@@ -2,7 +2,7 @@ const electron = require('electron');
 const path = require('path');
 const url = require('url');
 
-const argumentProcessor = require('./script/util/argument-processor.js');
+const argumentProcessor = require('./js/util/argument-processor.js');
 
 // Module to control application life.
 const app = electron.app;
@@ -15,7 +15,7 @@ let mainWindow;
 function createWindow () {
   // Create the browser window...
   mainWindow = new BrowserWindow({
-    icon: __dirname + '/resource/image/icon.png',
+    icon: __dirname + '/img/icon.png',
     width: 800, height: 600,
     minWidth: 600, minHeight: 400,
     frame: false});

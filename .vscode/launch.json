@@ -5,12 +5,12 @@
             "name": "Launch",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/source/main.js",
+            "program": "${workspaceRoot}/src/main.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
             "preLaunchTask": null,
-            "runtimeExecutable": "${workspaceRoot}/source/node_modules/electron/dist/electron.exe",
+            "runtimeExecutable": "${workspaceRoot}/src/node_modules/electron/dist/electron.exe",
             "runtimeArgs": [
                 "--nolazy",
                 "-d"

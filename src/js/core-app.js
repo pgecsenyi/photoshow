@@ -72,52 +72,52 @@ coreApp.config(['$routeProvider', function ($routeProvider) {
     .when('/add-audience',
     {
       controller: 'AddAudienceController',
-      templateUrl: 'template/add-audience.html'
+      templateUrl: 'tpl/add-audience.html'
     })
     .when('/create-collection',
     {
       controller: 'CreateCollectionController',
-      templateUrl: 'template/create-collection.html'
+      templateUrl: 'tpl/create-collection.html'
     })
     .when('/create-presentation',
     {
       controller: 'CreatePresentationController',
-      templateUrl: 'template/create-presentation.html'
+      templateUrl: 'tpl/create-presentation.html'
     })
     .when('/edit-transformations',
     {
       controller: 'EditTransformationsController',
-      templateUrl: 'template/edit-transformations.html'
+      templateUrl: 'tpl/edit-transformations.html'
     })
     .when('/generate-presentation:presentationId',
     {
       controller: 'GeneratePresentationController',
-      templateUrl: 'template/generate-presentation.html'
+      templateUrl: 'tpl/generate-presentation.html'
     })
     .when('/presentation-details:presentationId',
     {
       controller: 'PresentationDetailsController',
-      templateUrl: 'template/presentation-details.html'
+      templateUrl: 'tpl/presentation-details.html'
     })
     .when('/presentations',
     {
       controller: 'PresentationsController',
-      templateUrl: 'template/presentations.html'
+      templateUrl: 'tpl/presentations.html'
     })
     .when('/open-collection',
     {
       controller: 'OpenCollectionController',
-      templateUrl: 'template/open-collection.html'
+      templateUrl: 'tpl/open-collection.html'
     })
     .when('/select-images',
     {
       controller: 'SelectImagesController',
-      templateUrl: 'template/select-images.html'
+      templateUrl: 'tpl/select-images.html'
     })
     .when('/start-page',
     {
       controller: 'StartPageController',
-      templateUrl: 'template/start-page.html'
+      templateUrl: 'tpl/start-page.html'
     })
     .otherwise({ redirectTo: '/start-page' });
 }]);
@@ -127,21 +127,21 @@ coreApp.directive('descriptionDialog', function() {
   return {
     restrict: 'E',
     replace: 'true',
-    templateUrl: 'template/dialog/description-dialog.html'
+    templateUrl: 'tpl/dialog/description-dialog.html'
   };
 });
 coreApp.directive('rotateDialog', function() {
   return {
     restrict: 'E',
     replace: 'true',
-    templateUrl: 'template/dialog/rotate-dialog.html'
+    templateUrl: 'tpl/dialog/rotate-dialog.html'
   };
 });
 coreApp.directive('scaleDialog', function() {
   return {
     restrict: 'E',
     replace: 'true',
-    templateUrl: 'template/dialog/scale-dialog.html'
+    templateUrl: 'tpl/dialog/scale-dialog.html'
   };
 });
 

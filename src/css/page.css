@@ -54,22 +54,22 @@
 }
 
 #edit-transformations-page #btn-clean {
-  background-image: url('../image/edit-transformations/clean.png');
+  background-image: url('../img/edit-transformations/clean.png');
 }
 #edit-transformations-page #btn-clean.active {
-  background-image: url('../image/edit-transformations/clean-active.png');
+  background-image: url('../img/edit-transformations/clean-active.png');
 }
 #edit-transformations-page #btn-rotate {
-  background-image: url('../image/edit-transformations/rotate.png');
+  background-image: url('../img/edit-transformations/rotate.png');
 }
 #edit-transformations-page #btn-rotate.active {
-  background-image: url('../image/edit-transformations/rotate-active.png');
+  background-image: url('../img/edit-transformations/rotate-active.png');
 }
 #edit-transformations-page #btn-scale {
-  background-image: url('../image/edit-transformations/scale.png');
+  background-image: url('../img/edit-transformations/scale.png');
 }
 #edit-transformations-page #btn-scale.active {
-  background-image: url('../image/edit-transformations/scale-active.png');
+  background-image: url('../img/edit-transformations/scale-active.png');
 }
 
 /*******************************************************************************************************************//**
@@ -422,31 +422,31 @@
 }
 
 #select-images-page > #control-panel > #controls > div > #accept {
-  background-image: url("../image/select-images/accept.png");
+  background-image: url("../img/select-images/accept.png");
 }
 #select-images-page > #control-panel > #controls > div > #add-description {
-  background-image: url("../image/select-images/add-description.png");
+  background-image: url("../img/select-images/add-description.png");
 }
 #select-images-page > #control-panel > #controls > div > #cut {
-  background-image: url("../image/select-images/cut.png");
+  background-image: url("../img/select-images/cut.png");
 }
 #select-images-page > #control-panel > #controls > div > #more {
-  background-image: url("../image/select-images/more.png");
+  background-image: url("../img/select-images/more.png");
 }
 #select-images-page > #control-panel > #controls > div > #next {
-  background-image: url("../image/select-images/next.png");
+  background-image: url("../img/select-images/next.png");
 }
 #select-images-page > #control-panel > #controls > div > #paste {
-  background-image: url("../image/select-images/paste.png");
+  background-image: url("../img/select-images/paste.png");
 }
 #select-images-page > #control-panel > #controls > div > #previous {
-  background-image: url("../image/select-images/previous.png");
+  background-image: url("../img/select-images/previous.png");
 }
 #select-images-page > #control-panel > #controls > div > #reject {
-  background-image: url("../image/select-images/reject.png");
+  background-image: url("../img/select-images/reject.png");
 }
 #select-images-page > #control-panel > #controls > div > #rotate {
-  background-image: url("../image/select-images/rotate.png");
+  background-image: url("../img/select-images/rotate.png");
 }
 
 /*******************************************************************************************************************//**
@@ -468,8 +468,8 @@
 }
 
 #start-page #create-collection {
-  background: url("../image/start-page/new.png");
+  background: url("../img/start-page/new.png");
 }
 #start-page #open-collection {
-  background: url("../image/start-page/open.png");
+  background: url("../img/start-page/open.png");
 }

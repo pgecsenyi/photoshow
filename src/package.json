@@ -15,7 +15,7 @@
   ],
   "main": "main.js",
   "scripts": {
-    "lint": "eslint -c ../.eslintrc.json script/*/*.js --ignore-pattern script/external/ > ../report_eslint.log",
+    "lint": "eslint -c ../.eslintrc.json js/*/*.js --ignore-pattern js/external/ > ../report_eslint.log",
     "start": "electron ."
   },
   "engines": {

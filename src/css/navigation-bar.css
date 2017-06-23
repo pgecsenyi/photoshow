@@ -79,93 +79,93 @@
 }
 
 #navigation-bar #btn-add-audience {
-  background-image: url("../image/navbar-dark/add-audience.png");
+  background-image: url("../img/navbar-dark/add-audience.png");
 }
 #navigation-bar #btn-create-presentation {
-  background-image: url("../image/navbar-dark/add-presentation.png");
+  background-image: url("../img/navbar-dark/add-presentation.png");
 }
 #navigation-bar #btn-back {
-  background-image: url("../image/navbar-dark/back.png");
+  background-image: url("../img/navbar-dark/back.png");
 }
 #navigation-bar #btn-cancel {
-  background-image: url("../image/navbar-dark/cancel.png");
+  background-image: url("../img/navbar-dark/cancel.png");
 }
 #navigation-bar #btn-close {
-  background-image: url("../image/navbar-dark/placeholder.png");
+  background-image: url("../img/navbar-dark/placeholder.png");
 }
 #navigation-bar #btn-close:hover {
-  background-image: url("../image/navbar-dark/close.png");
+  background-image: url("../img/navbar-dark/close.png");
 }
 #navigation-bar #btn-display-errors {
-  background-image: url("../image/navbar-dark/error.png");
+  background-image: url("../img/navbar-dark/error.png");
 }
 #navigation-bar #btn-forward {
-  background-image: url("../image/navbar-dark/forward.png");
+  background-image: url("../img/navbar-dark/forward.png");
 }
 #navigation-bar #btn-generate {
-  background-image: url("../image/navbar-dark/generate.png");
+  background-image: url("../img/navbar-dark/generate.png");
 }
 #navigation-bar #btn-home {
-  background-image: url("../image/navbar-dark/home.png");
+  background-image: url("../img/navbar-dark/home.png");
 }
 #navigation-bar #btn-maximize {
-  background-image: url("../image/navbar-dark/placeholder.png");
+  background-image: url("../img/navbar-dark/placeholder.png");
 }
 #navigation-bar #btn-maximize:hover {
-  background-image: url("../image/navbar-dark/maximize.png");
+  background-image: url("../img/navbar-dark/maximize.png");
 }
 #navigation-bar #btn-minimize {
-  background-image: url("../image/navbar-dark/placeholder.png");
+  background-image: url("../img/navbar-dark/placeholder.png");
 }
 #navigation-bar #btn-minimize:hover {
-  background-image: url("../image/navbar-dark/minimize.png");
+  background-image: url("../img/navbar-dark/minimize.png");
 }
 #navigation-bar #btn-save {
-  background-image: url("../image/navbar-dark/save.png");
+  background-image: url("../img/navbar-dark/save.png");
 }
 
 #navigation-bar.error #btn-add-audience {
-  background-image: url("../image/navbar-light/add-audience.png");
+  background-image: url("../img/navbar-light/add-audience.png");
 }
 #navigation-bar.error #btn-create-presentation {
-  background-image: url("../image/navbar-light/add-presentation.png");
+  background-image: url("../img/navbar-light/add-presentation.png");
 }
 #navigation-bar.error #btn-back {
-  background-image: url("../image/navbar-light/back.png");
+  background-image: url("../img/navbar-light/back.png");
 }
 #navigation-bar.error #btn-cancel {
-  background-image: url("../image/navbar-light/cancel.png");
+  background-image: url("../img/navbar-light/cancel.png");
 }
 #navigation-bar.error #btn-close {
-  background-image: url("../image/navbar-light/placeholder.png");
+  background-image: url("../img/navbar-light/placeholder.png");
 }
 #navigation-bar.error #btn-close:hover {
-  background-image: url("../image/navbar-light/close.png");
+  background-image: url("../img/navbar-light/close.png");
 }
 #navigation-bar.error #btn-display-errors {
-  background-image: url("../image/navbar-light/error.png");
+  background-image: url("../img/navbar-light/error.png");
 }
 #navigation-bar.error #btn-forward {
-  background-image: url("../image/navbar-light/forward.png");
+  background-image: url("../img/navbar-light/forward.png");
 }
 #navigation-bar.error #btn-generate {
-  background-image: url("../image/navbar-light/generate.png");
+  background-image: url("../img/navbar-light/generate.png");
 }
 #navigation-bar.error #btn-home {
-  background-image: url("../image/navbar-light/home.png");
+  background-image: url("../img/navbar-light/home.png");
 }
 #navigation-bar.error #btn-maximize {
-  background-image: url("../image/navbar-light/placeholder.png");
+  background-image: url("../img/navbar-light/placeholder.png");
 }
 #navigation-bar.error #btn-maximize:hover {
-  background-image: url("../image/navbar-light/maximize.png");
+  background-image: url("../img/navbar-light/maximize.png");
 }
 #navigation-bar.error #btn-minimize {
-  background-image: url("../image/navbar-light/placeholder.png");
+  background-image: url("../img/navbar-light/placeholder.png");
 }
 #navigation-bar.error #btn-minimize:hover {
-  background-image: url("../image/navbar-light/minimize.png");
+  background-image: url("../img/navbar-light/minimize.png");
 }
 #navigation-bar.error #btn-save {
-  background-image: url("../image/navbar-light/save.png");
+  background-image: url("../img/navbar-light/save.png");
 }
