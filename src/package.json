@@ -15,8 +15,9 @@
   ],
   "main": "main.js",
   "scripts": {
-    "lint": "eslint -c ../.eslintrc.json js/*/*.js --ignore-pattern js/external/ > ../report_eslint.log",
-    "start": "electron ."
+    "lint": "eslint -c ../.eslintrc.json js/*/*.js --ignore-pattern js/external/",
+    "start": "electron .",
+    "test": "node node_modules/mocha/bin/mocha js/test/test.js"
   },
   "engines": {
     "node": "^6.9.1",
@@ -33,7 +34,11 @@
     "xmlbuilder": "^8.2.2"
   },
   "devDependencies": {
-    "electron": "^1.4.1"
+    "chai": "^4.0.2",
+    "chai-as-promised": "^7.0.0",
+    "electron": "^1.4.1",
+    "mocha": "^3.4.2",
+    "spectron": "^3.6.4"
   },
   "peerDependencies": {
     "eslint": "^3.10.2"

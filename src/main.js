@@ -18,7 +18,8 @@ function createWindow () {
     icon: __dirname + '/img/icon.png',
     width: 800, height: 600,
     minWidth: 600, minHeight: 400,
-    frame: false});
+    frame: false
+  });
 
   // ... and load the index.html of the app.
   mainWindow.loadURL(url.format({
