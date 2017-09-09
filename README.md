@@ -13,4 +13,4 @@ After package restore process completes, the application can be started by execu
 ## Development Environment
 
   * Windows 10
-  * Visual Studio Code 1.13.1
+  * Visual Studio Code 1.15.1
