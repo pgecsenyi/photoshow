@@ -1,6 +1,6 @@
 # PhotoShow
 
-An image presentation builder.
+A cross-platform desktop application that allows creating several different presentations from the same photo albums without modifying any of the original images.
 
 ## Installation and usage
 
