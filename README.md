@@ -4,13 +4,13 @@ A cross-platform desktop application that allows creating several different pres
 
 ## Installation and usage
 
-Install the latest versions of _Node.js_ (together with _npm_) on your system. Copy the files from the `source` directory to the directory of your choice. Navigate to the selected directory and issue the following command.
+Install _Node.js_ (along with _npm_ and _Yarn_) on your system. Run the following command from the project folder.
 
-    npm install
+    yarn install
 
-After package restore process completes, the application can be started by executing the `npm start` command. _Visual Studio Code_ can also be used for running and debugging the application.
+After package restore process completes, the application can be started by executing the `yarn start` command. _Visual Studio Code_ can also be used for running and debugging the application.
 
 ## Development Environment
 
-  * Windows 10
-  * Visual Studio Code 1.15.1
+  * Yarn 0.27.5
+  * Visual Studio Code 1.19.1
