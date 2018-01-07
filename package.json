@@ -24,21 +24,21 @@
     "npm": "^3.10.8"
   },
   "dependencies": {
-    "angular": "^1.5.8",
+    "angular": "^1.6.8",
     "angular-hotkeys": "^1.7.0",
-    "angular-route": "^1.5.8",
+    "angular-route": "^1.6.8",
     "electron-process": "^0.2.0",
-    "jimp": "^0.2.27",
-    "node-dir": "^0.1.16",
-    "xml2js": "^0.4.17",
-    "xmlbuilder": "^8.2.2"
+    "jimp": "^0.2.28",
+    "node-dir": "^0.1.17",
+    "xml2js": "^0.4.19",
+    "xmlbuilder": "^9.0.4"
   },
   "devDependencies": {
-    "chai": "^4.0.2",
-    "chai-as-promised": "^7.0.0",
-    "electron": "^1.4.1",
-    "eslint": "^3.10.2",
-    "mocha": "^3.4.2",
-    "spectron": "^3.6.4"
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "electron": "^1.7.10",
+    "eslint": "^4.15.0",
+    "mocha": "^4.1.0",
+    "spectron": "^3.7.2"
   }
 }
