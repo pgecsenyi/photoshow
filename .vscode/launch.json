@@ -11,7 +11,7 @@
             "cwd": "${workspaceRoot}",
             "preLaunchTask": null,
             "protocol": "legacy",
-            "runtimeExecutable": "${workspaceRoot}/node_modules/electron/dist/electron.exe",
+            "runtimeExecutable": "${workspaceRoot}/node_modules/electron/dist/electron",
             "runtimeArgs": [
                 "--nolazy",
                 "-d"

@@ -12,5 +12,4 @@ After package restore process completes, the application can be started by execu
 
 ## Development Environment
 
-  * Yarn 0.27.5
-  * Visual Studio Code 1.19.1
+  * Visual Studio Code 1.19.3
